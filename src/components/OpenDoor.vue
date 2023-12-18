@@ -12,7 +12,7 @@ export default {
     methods: {
         async openDoor() {
             try {
-                const response = await axios.post('http://localhost:8081/open-door');
+                const response = await axios.post('/api/open-door');
                 alert(response.data.message);
             } catch (error) {
                 alert(error.response ? error.response.data.error : 'Failed to reach the server');
